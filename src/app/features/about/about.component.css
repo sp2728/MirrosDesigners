@@ -1,0 +1,126 @@
+.wrapper{
+    min-height: 50vh;
+    background: url("../../../assets/7.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+#contentOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+#line{
+    font-size: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgb(41, 41, 41, 0.8);
+}
+
+#line2{
+    color: rgba(223, 223, 223, 0.8);
+    font-size: 20px;
+}
+
+/* Content Two */
+#contentTwo{
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+.conceptsTitle{
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.conceptsContent, #readMore{
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: gray;
+}
+
+#readMore{
+    color: black;
+}
+
+#readMore:after{
+    content:'\21DB';
+    position: relative;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+#readMore:hover:after{
+    left:10px;
+}
+
+/* Content Three */
+#contentThree{
+    min-height: 60vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: justify;
+}
+
+#awards div{
+    display: flex;
+    margin: 1.5em;
+}
+
+#awards span{
+    padding: 1.5em;
+    border-left: 1px solid gray;
+}
+
+
+.image2{
+    width: 600px;
+    height: 350px;
+}
+
+.bx-award{
+    font-size: 60px;
+}
+
+/* Content Four */
+#contentFour{
+    min-height: 80vh;
+}
+
+#amazing{
+    height: 32vh;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width:768px){
+    #contentTwo{
+        flex-direction: column;
+    }
+    .col{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    #contentThree{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .image2{
+        width: 100%;
+        height: auto;
+    }
+}

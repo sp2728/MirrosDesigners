@@ -1,0 +1,114 @@
+.wrapper{
+    height: 100vh;
+    background: url('../../../assets/1.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+/*Content One*/
+#contenOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+#line{
+    font-size: 7vw;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgb(233, 202, 202);
+}
+
+#line2{
+    font-size: 20px;
+    color: rgb(194, 194, 194);
+}
+
+.button{
+    padding: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s all;
+    text-decoration: none;
+}
+
+#purchaseNow{
+    display: block;
+    background-color: white;
+    color: black;
+}
+
+#purchaseNow:hover, #checkOut{
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+/*Content Two*/
+#contentTwo{
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#conceptsTitle{
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#conceptsContent{
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: gray;
+}
+
+#checkOut:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.image{
+    margin: 10px;
+    height: 200px;
+    transition: 0.5s ease-in-out;
+}
+
+.image:hover{
+    transform: scale(1.1);
+}
+
+/* Content Three */
+#contentThree{
+    min-height: 60vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image2{
+    width: 600px;
+    height: 350px;
+}
+
+@media screen and (max-width:768px){
+    #contentThree{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .image2{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
