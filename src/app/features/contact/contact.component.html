@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <app-header></app-header>
+    <div class="container" id="contentOne">
+        <p id="line"> Contact us</p>
+        <p id="line2"> Experienced and Friendly </p>
+    </div>
+</div>
+<div class="container-fluid" id="contentTwo">
+    <div class="container" id="ourContact">
+        <span id="contactTitle"> Our Amazing Team </span>
+        <span class="pt-3" id="contactContent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut laoreet dolore magna aliquam erat volutpat.</span>
+    </div>
+    <div class="container-fluid" id="contact">
+        <div class="col text-center">
+            <p id="title"> Our Address </p>
+            <p id="content"> XYZ , ABC Street, CA, 90912 </p>
+        </div>
+        <div class="col text-center">
+            <p id="title"> Our Email </p>
+            <p id="content"> youremail@email.com </p>
+        </div>
+        <div class="col text-center">
+            <p id="title"> Call Us </p>
+            <p id="content"> Phone:  (+1)123-456-1232 </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="contentThree">
+    <p class="pt-3 pl-3" id="comment"> Leave a comment </p>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+        <div class="form-group" id="contantDetails">
+            <div class="form-group w-100 m-2">
+                <input type="text" class="form-control" formControlName="name" placeholder="Name*">
+                <span class="text-danger" *ngIf="contactForm.get('name').hasError('required') && submitted">Name is Required</span>
+            </div>
+            <div class="form-group w-100 m-2">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email*">
+                <span class="text-danger" *ngIf="contactForm.get('email').hasError('required') && submitted">Email is Required</span>
+                <span class="text-danger" *ngIf="contactForm.get('email').hasError('email') && submitted">Email is not in valid format</span>
+            </div>
+        </div>
+        <div class="form-group m-2">
+            <textarea class="form-control" type="text" rows="8" cols="8" formControlName="message" placeholder="Send Message *"></textarea>
+            <span class="text-danger" *ngIf="contactForm.get('message').hasError('required') && submitted">Message is Required</span>
+        </div>
+        <div class="form-group m-2">
+            <button class="button shadow" id="send"> Send Message </button>
+        </div>
+    </form>
+
+</div>
+
+<app-footer></app-footer>
