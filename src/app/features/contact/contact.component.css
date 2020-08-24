@@ -1,6 +1,6 @@
 .wrapper{
     min-height: 50vh;
-    background: url("../../../assets/4.jpeg") no-repeat center fixed;
+    background: url("/assets/4.jpeg") no-repeat center fixed;
     background-size: cover;
 }
 
